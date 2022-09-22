@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+compile '/*.md' do
+  filter :erb
+  if item.identifier =~ '/index.*'
+    layout '/blog.erb'
+    write item.identifier.without_ext + '.html'
+  else
+    layout '/default.erb'
+    write item.identifier.without_ext + '/index.html'
+  end
+end
+
+compile '/posts/*.md' do
+  filter :erb
+  layout '/post.erb'
+  write item.identifier.without_ext + '/index.html' 
+end
+
+compile '/assets/*' do
+  write item.identifier.to_s
+end
+
+layout '/*', :erb

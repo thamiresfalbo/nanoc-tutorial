@@ -1,0 +1,8 @@
+<% render '/default.erb' do %>
+<%= yield %>
+	<ul>
+		<% articles.each do |article| %>
+		<li><%= link_to article[:title], article %></li>
+		<% end %>
+	</ul>
+<% end %>
