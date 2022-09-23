@@ -1,20 +1,20 @@
 #!/usr/bin/env ruby
 
 compile '/*.md' do
-  filter :erb
+  filter :kramdown
   if item.identifier =~ '/index.*'
     layout '/blog.erb'
-    write item.identifier.without_ext + '.html'
+    write @item.identifier.without_ext + '.html'
   else
     layout '/default.erb'
-    write item.identifier.without_ext + '/index.html'
+    write @item.identifier.without_ext + '/index.html'
   end
 end
 
 compile '/posts/*.md' do
-  filter :erb
+  filter :kramdown
   layout '/post.erb'
-  write item.identifier.without_ext + '/index.html' 
+  write @item.identifier.without_ext + '/index.html' 
 end
 
 compile '/assets/*' do

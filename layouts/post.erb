@@ -1,5 +1,4 @@
 <% render '/default.erb' do %>
-	<h2><%= @item[:title] %></h2>
-	<small><%= @item[:date].strftime('%a %d %b %Y') %></small>
-	<p><%= yield %></p>
+    <small><%= @item[:date].strftime('%a %d %b %Y') %></small>
+    <p><%= yield %></p>
 <% end %>

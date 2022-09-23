@@ -1,8 +1,16 @@
 body {
-  background: oldlace;
+  background: ghostwhite;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  margin: auto;
+  max-width: 75%;
 }
 
-pre {
+.highlight {
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+nav {
 }

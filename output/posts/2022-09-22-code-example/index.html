@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/syntax.css" />
     <link rel="stylesheet" href="/assets/stylesheet.css" />
-    <title>🦍 Handsome Gorilla - Hello World</title>
+    <title>🦍 Handsome Gorilla - Code Example</title>
   </head>
   <body>
     <h1>🦍 Handsome Gorilla</h1>
     <main>
-      <h2>Hello World</h2>
+      <h2>Code Example</h2>
       
     <small>Thu 22 Sep 2022</small>
-    <p><p>Hello, wonderful world!</p>
+    <p><p>A simple yield example:</p>
+
+<pre><code class="language-ruby">def multiply(a,b)
+  puts "#{a} multiplied by #{b} is equal to #{a * b}"
+end 
+
+def calculate(msg)
+  puts "Calculating..."
+  yield
+  puts "Done!"
+end
+
+calculate() {multiply(2,6)}
+</code></pre>
 </p>
 
     </main>
