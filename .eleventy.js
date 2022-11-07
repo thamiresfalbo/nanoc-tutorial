@@ -1,9 +1,12 @@
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPasstroughCopy("img");
     // Return your Object options:
     return {
       dir: {
-        input: "views",
-        output: "dist"
+        input: "src",
+        includes: "_includes",
+        data: "_data",
+        output: "_site"
       }
     }
   };
