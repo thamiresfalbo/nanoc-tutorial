@@ -1,0 +1,37 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+    color: black;
+    background-color: ghostwhite;
+    margin: auto;
+    max-width: 50%;
+}
+
+#navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    padding: 0em 1em 0em 1em;
+}
+
+pre {
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+}
+
+a {
+    color: royalblue;
+}
+
+a:visited{
+    color: crimson;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(20, 14, 33);
+        color: white;
+    }
+}

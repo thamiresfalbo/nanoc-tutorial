@@ -1,0 +1,12 @@
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }
+    %stylesheet_url '/assets/stylesheet.css'
+    %title= @config[:tittle]
+  %body
+    #navbar
+      %h1= @config[:title]
+      - @config[:social].each do |single|
+        = link_to(single[:title], single[:url])
+    %main
+    %yield
