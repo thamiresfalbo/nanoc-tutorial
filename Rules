@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 
 compile '/*.md' do
-  if item.identifier =~ '/index.*'
+  filter :kramdown
+  if item.identifier == '/blog.md'
     layout '/blog.*'
+    write item.identifier.without_ext + '/index.html'
+  elsif item.identifier == '/index.md'
+    layout '/default.*'
     write item.identifier.without_ext + '.html'
   else
     layout '/default.*'
@@ -11,11 +15,16 @@ compile '/*.md' do
 end
 
 compile '/posts/*.md' do
+  filter :kramdown
   layout '/post.*'
   write item.identifier.without_ext + '/index.html'
 end
 
-compile '/assets/*' do
+compile '/assets/img/*' do
+  write item.identifier.to_s
+end
+
+compile '/assets/css/*' do
   write item.identifier.to_s
 end
 

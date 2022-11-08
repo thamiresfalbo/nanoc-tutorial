@@ -1,0 +1,48 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  color: black;
+  background-color: oldlace;
+  background-image: url("/assets/img/arabesque.png");
+}
+
+main {
+  background-color: gainsboro;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 1em;
+  /* border-radius: 25px; */
+  margin: auto;
+  max-width: 70%;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 2px;
+}
+
+pre {
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+  padding: 1em;
+}
+
+a {
+  color: royalblue;
+}
+
+a:visited {
+  color: crimson;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(20, 14, 33);
+    color: white;
+  }
+}

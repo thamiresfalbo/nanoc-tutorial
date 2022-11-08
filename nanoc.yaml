@@ -13,7 +13,11 @@ data_sources:
   - type: filesystem
     encoding: utf-8
 
-social:
+nav:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
   - title: Mastodon
     url: https://eldritch.cafe/@aarensage
   - title: Tumblr

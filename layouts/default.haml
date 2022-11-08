@@ -1,12 +1,14 @@
 %html{ lang: 'en' }
   %head
     %meta{ charset: 'UTF-8' }
-    %stylesheet_url '/assets/stylesheet.css'
+    %link{ rel:"stylesheet", href: "/assets/css/stylesheet.css"}
+    %link{ rel:"stylesheet", href: "/assets/css/syntax.css"}
+    %meta{ name:"viewport", content:"width=device-width, initial-scale=1" }
     %title= @config[:tittle]
   %body
-    #navbar
-      %h1= @config[:title]
-      - @config[:social].each do |single|
-        = link_to(single[:title], single[:url])
     %main
-    %yield
+      #navbar
+        %h1{ style:"flex-grow: 1;"}= @config[:title]
+        - @config[:nav].each do |single|
+          %h2{style: "padding: 5px;"}= link_to(single[:title], single[:url])
+      = yield

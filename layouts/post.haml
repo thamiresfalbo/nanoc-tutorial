@@ -1,4 +1,4 @@
 = render '/default.*' do
+    %h2= @item[:title]
     %small= @item[:date].strftime('%a %d %b %Y')
     %p= yield
-

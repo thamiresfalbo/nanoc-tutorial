@@ -1,5 +1,6 @@
 = render '/default.*' do
   = yield
+  %h2 Blog
   %ul
   - articles.each do |article|
     %li= link_to(article[:title], article)
